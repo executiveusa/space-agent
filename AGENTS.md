@@ -92,6 +92,7 @@ App docs:
 - `/app/L0/_all/mod/_core/login_hooks/AGENTS.md`
 - `/app/L0/_all/mod/_core/memory/AGENTS.md`
 - `/app/L0/_all/mod/_core/onscreen_agent/AGENTS.md`
+- `/app/L0/_all/mod/_core/onscreen_agent/agents/AGENTS.md` (NEW - Agent Profiles)
 - `/app/L0/_all/mod/_core/onscreen_agent/prompts/AGENTS.md`
 - `/app/L0/_all/mod/_core/onscreen_menu/AGENTS.md`
 - `/app/L0/_all/mod/_core/open_router/AGENTS.md`
