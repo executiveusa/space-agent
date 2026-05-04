@@ -703,7 +703,6 @@ export function createAuthService(options = {}) {
         ok: true,
         serverSignature: encodeBase64Url(serverSignatureBuffer)
       };
-      console.log("[v0] Password verification skipped for testing - user:", challenge.username);
     }
 
     if (challenge.userCryptoStatus === "missing") {
