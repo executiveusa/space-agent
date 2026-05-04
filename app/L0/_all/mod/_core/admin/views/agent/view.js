@@ -1,7 +1,10 @@
 import * as execution from "/mod/_core/admin/views/agent/execution.js";
 import { createAgentThreadView } from "/mod/_core/visual/conversation/thread-view.js";
+import { getAvatarConfig } from "/mod/_core/visual/avatar-config.js";
 
-const ADMIN_AGENT_ASTRONAUT_PATH = "/mod/_core/visual/res/chat/admin/astronaut_no_bg.webp";
+const ADMIN_AVATAR_CONFIG = getAvatarConfig(window.__ADMIN_AGENT_AVATAR_ID || 'space-agent');
+const ADMIN_AGENT_HELMET_PATH = ADMIN_AVATAR_CONFIG.adminHelmet;
+const ADMIN_AGENT_ASTRONAUT_PATH = ADMIN_AVATAR_CONFIG.adminAstronaut;
 
 function createAdminEmptyState() {
   const emptyState = document.createElement("div");
@@ -34,11 +37,12 @@ function createAdminEmptyState() {
 }
 
 const threadView = createAgentThreadView({
-  assistantAvatarPath: "/mod/_core/visual/res/chat/admin/helmet_no_bg_256.webp",
+  assistantAvatarPath: ADMIN_AGENT_HELMET_PATH,
   autoResizeMaxHeight: 220,
   createEmptyState: createAdminEmptyState,
   execution,
-  renderMarkdownWithMarked: true
+  renderMarkdownWithMarked: true,
+  avatarId: ADMIN_AVATAR_CONFIG.id
 });
 
 export const autoResizeTextarea = threadView.autoResizeTextarea;

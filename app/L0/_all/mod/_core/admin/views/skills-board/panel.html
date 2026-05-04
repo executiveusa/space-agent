@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skills Board - Agent Alex</title>
+  <link rel="stylesheet" href="panel.css" />
+</head>
+<body>
+  <div class="skills-board-page">
+    <nav class="skills-breadcrumb">
+      <a href="/admin">Admin</a>
+      <span class="separator">/</span>
+      <span class="current">Skills Board</span>
+    </nav>
+
+    <div id="skills-board-container" class="skills-board-wrapper">
+      <!-- Skills board will be rendered here -->
+    </div>
+  </div>
+
+  <script type="module">
+    import { initSkillsBoardView } from "./view.js";
+    
+    document.addEventListener("DOMContentLoaded", async () => {
+      await initSkillsBoardView();
+    });
+  </script>
+</body>
+</html>

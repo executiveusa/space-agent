@@ -1,0 +1,88 @@
+# Agent Alex - Kupuri Media Configuration
+# This is a preset configuration for Agent Alex to control Kupuri Media operations
+# Owner: Ivette Milo
+# Operating System: Synthia OS
+
+# Agent Identity
+agent_id: alex-kupuri
+agent_name: "Agent Alex - Kupuri Media"
+agent_avatar: alex
+
+# Owner & Company Information
+owner: "Ivette Milo"
+company: "Kupuri Media"
+description: "Automated AI media company orchestration agent"
+
+# Operating System Integration
+operating_system: "Synthia OS"
+system_integration_enabled: true
+
+# Model Configuration
+model: "anthropic/claude-sonnet-4.6"
+temperature: 0.2
+max_tokens: 120000
+
+# System Prompt
+custom_system_prompt_enabled: true
+system_prompt_path: "/mod/_core/onscreen_agent/prompts/agent-alex-kupuri-system.md"
+
+# Agent Capabilities
+capabilities:
+  - content-generation
+  - media-publishing
+  - analytics
+  - synthia-os-integration
+  - content-calendar
+  - publishing-pipeline
+  - analytics-engine
+
+# LLM Council Configuration
+llm_council:
+  enabled: true
+  role: "orchestrator"
+  participation_mode: "active"
+  consultation_expertise:
+    - media-strategy
+    - content-optimization
+    - audience-analysis
+    - cross-channel-coordination
+
+# Viewing Room Configuration
+viewing_room:
+  enabled: true
+  access_level: "full"
+  role: "monitor"
+  contribution_enabled: true
+  can_alert: true
+  can_coordinate: true
+
+# Branding & UI
+avatar_id: "alex"
+branding_theme: "kupuri"
+primary_color: "#2563eb"
+accent_color: "#1e40af"
+
+# Skills & Tools
+auto_loaded_skills:
+  - kupuri-media-control
+  - synthia-os-integration
+
+# Behavior Settings
+autonomous_mode: true
+decision_escalation_enabled: true
+real_time_analytics: true
+multi_channel_publishing: true
+
+# Content Configuration
+content_settings:
+  auto_optimize: true
+  platform_adaptation: true
+  quality_assurance: true
+  compliance_checking: true
+
+# Performance Monitoring
+monitoring:
+  track_metrics: true
+  generate_reports: true
+  alert_on_anomalies: true
+  predictive_analytics: true
