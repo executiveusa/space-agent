@@ -143,3 +143,7 @@ DeepWiki covers the human-readable side of that same knowledge base. Together, t
 If you want the deep tour, start here:
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/agent0ai/space-agent)
+
+## Related project
+
+- [OpenChronicle](https://github.com/Einsia/OpenChronicle)
