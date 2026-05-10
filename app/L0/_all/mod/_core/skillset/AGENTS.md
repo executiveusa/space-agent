@@ -46,6 +46,7 @@ This module owns:
 - `ext/skills/pdf-report/SKILL.md` plus `ext/skills/pdf-report/pdf-report.js`: the top-level onscreen skill for browser-generated PDF creation and download, plus its generic structured-report and HTML-to-PDF helper
 - `ext/skills/screenshots/SKILL.md` plus `ext/skills/screenshots/screenshots.js`: the top-level onscreen skill for page or element screenshots, plus its browser capture helper
 - `ext/skills/user-management/SKILL.md`: the top-level onscreen skill for user account and membership file operations
+- `ext/skills/openchronicle/SKILL.md`: the top-level skill that records the OpenChronicle upstream repository contract for agent tasks that should reference or integrate that project
 - `skills.js`: shared browser-side skill discovery, frontmatter metadata parsing, `metadata.when` plus `metadata.loaded` plus `metadata.placement` evaluation against tags collected through framework `js/context.js`, the runtime loaded-skill registry under `space.chat.skills`, and compact prompt-section builders reused by `_core/onscreen_agent` and `_core/admin`
 - `vendor/html2canvas.min.js` and `vendor/html2canvas.LICENSE`: vendored `html2canvas@1.4.1` browser bundle and license reused by the screenshot and PDF-report helpers
 
