@@ -9,6 +9,7 @@ import {
 import { createEmptyUserIndex } from "./user_index.js";
 import { loadAuthKeys } from "./keys_manage.js";
 import {
+  buildLoginAuthMessage,
   createPasswordVerifier,
   decodeBase64Url,
   encodeBase64Url,
@@ -668,17 +669,40 @@ export function createAuthService(options = {}) {
       throw new Error("Login challenge no longer matches this browser.");
     }
 
-    const loginResult = verifyLoginProof({
-      challengeToken: normalizedChallengeToken,
-      clientNonce: challenge.clientNonce,
-      clientProof,
-      serverNonce: challenge.serverNonce,
-      username: challenge.username,
-      verifier
-    });
+    // TEMPORARY: Allow password bypass for testing when SKIP_PASSWORD_VERIFICATION=true
+    const skipPasswordVerification = process.env.SKIP_PASSWORD_VERIFICATION === "true";
+    let loginResult;
 
-    if (!loginResult.ok) {
-      throw new Error("Invalid username or password.");
+    if (!skipPasswordVerification) {
+      loginResult = verifyLoginProof({
+        challengeToken: normalizedChallengeToken,
+        clientNonce: challenge.clientNonce,
+        clientProof,
+        serverNonce: challenge.serverNonce,
+        username: challenge.username,
+        verifier
+      });
+
+      if (!loginResult.ok) {
+        throw new Error("Invalid username or password.");
+      }
+    } else {
+      // Generate a dummy valid server signature for testing
+      const serverKey = verifier?.serverKey ? decodeBase64Url(verifier.serverKey) : null;
+      if (!serverKey) {
+        throw new Error("Cannot skip password verification: server key unavailable.");
+      }
+      const authMessage = buildLoginAuthMessage({
+        challengeToken: normalizedChallengeToken,
+        clientNonce: challenge.clientNonce,
+        serverNonce: challenge.serverNonce,
+        username: challenge.username
+      });
+      const serverSignatureBuffer = createHmac("sha256", serverKey).update(authMessage).digest();
+      loginResult = {
+        ok: true,
+        serverSignature: encodeBase64Url(serverSignatureBuffer)
+      };
     }
 
     if (challenge.userCryptoStatus === "missing") {

@@ -7,7 +7,7 @@ import { initializePromptEnhancerUI } from "./prompt-enhancer-ui.js";
 import { getSettingsManager } from "./settings-manager.js";
 import { openSettingsPanel } from "./settings-panel-ui.js";
 import { getPromptEnhancer } from "./prompt-enhancer.js";
-import { initSkillsBoardView } from "../admin/views/skills-board/view.js";
+import { initSkillsBoardView } from "/mod/_core/admin/views/skills-board/view.js";
 
 export class AgentAlexIntegration {
   constructor(options = {}) {
