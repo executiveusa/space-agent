@@ -5,7 +5,7 @@ import { installFetchProxy } from "./fetch-proxy.js";
 import * as markdown from "./markdown-frontmatter.js";
 import { buildProxyUrl, isProxyableExternalUrl } from "./proxy-url.js";
 import { getFrontendServerConfigValues } from "./server-config.js";
-import * as userCrypto from "/mod/_core/user_crypto/user-crypto.js";
+import * as userCrypto from "/pages/res/user-crypto.js";
 import * as yaml from "./yaml-lite.js";
 
 export function initializeRuntime(options = {}) {
