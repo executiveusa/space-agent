@@ -1,0 +1,81 @@
+# Agent Fanni — Kupuri Media Configuration
+# Sovereign media-intelligence and business-operations orchestrator
+# Company: Kupuri Media
+
+# Agent Identity
+agent_id: fanni
+agent_name: "Agent Fanni"
+agent_avatar: fanni
+
+# Owner & Company Information
+owner: "Kupuri Media"
+company: "Kupuri Media"
+description: "Sovereign media-intelligence and business-operations orchestrator for Kupuri Media"
+
+# Model Configuration
+model: "anthropic/claude-sonnet-4-6"
+temperature: 0.2
+max_tokens: 120000
+
+# System Prompt
+custom_system_prompt_enabled: true
+system_prompt_path: "/mod/_core/onscreen_agent/prompts/agent-fanni-system.md"
+
+# Agent Capabilities
+capabilities:
+  - media-intelligence
+  - business-operations
+  - checkpoint-rollback
+  - bilingual-en-es
+  - voice-input-output
+  - observability-ledger
+  - workflow-orchestration
+  - evidence-led-decisions
+
+# LLM Council Configuration
+llm_council:
+  enabled: true
+  role: "orchestrator"
+  participation_mode: "active"
+  consultation_expertise:
+    - media-intelligence
+    - commercial-strategy
+    - content-synthesis
+    - risk-and-rollback
+
+# Viewing Room Configuration
+viewing_room:
+  enabled: true
+  access_level: "full"
+  role: "monitor"
+  contribution_enabled: true
+  can_alert: true
+  can_coordinate: true
+
+# Branding & UI
+avatar_id: "fanni"
+branding_theme: "fanni"
+primary_color: "#B84DFF"
+accent_color: "#7C3AED"
+
+# Auto-loaded Skills
+auto_loaded_skills:
+  - media-intelligence
+  - fanni-voice
+
+# Behavior Settings
+autonomous_mode: true
+decision_escalation_enabled: true
+real_time_analytics: true
+multi_channel_publishing: false
+
+# Safety Gates (defaults — override per workspace)
+external_writes_enabled: false
+real_client_data_enabled: false
+
+# Performance Monitoring
+monitoring:
+  track_metrics: true
+  generate_reports: true
+  alert_on_anomalies: true
+  heartbeat_enabled: true

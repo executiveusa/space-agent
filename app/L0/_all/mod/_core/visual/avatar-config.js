@@ -55,6 +55,31 @@ export const AVATAR_REGISTRY = Object.freeze({
       councilMode: true,
       viewingRoomAccess: true
     }
+  },
+  'fanni': {
+    id: 'fanni',
+    name: 'Agent Fanni',
+    description: 'Sovereign media-intelligence and business-operations orchestrator for Kupuri Media',
+    helmets: '/mod/_core/visual/res/chat/fanni/helmet_256.webp',
+    astronaut: '/mod/_core/visual/res/chat/fanni/astronaut.webp',
+    branding: {
+      primaryColor: '#B84DFF',
+      accentColor: '#7C3AED',
+      secondaryColor: '#1A0A2E',
+      theme: 'fanni',
+      uiCustomizations: {
+        bubbleGradient: 'linear-gradient(135deg, #B84DFF 0%, #7C3AED 100%)',
+        accentGlow: 'rgba(184, 77, 255, 0.15)'
+      }
+    },
+    systemPromptPath: '/mod/_core/onscreen_agent/prompts/agent-fanni-system.md',
+    config: {
+      owner: 'Kupuri Media',
+      company: 'Kupuri Media',
+      role: 'Media Intelligence Agent',
+      councilMode: true,
+      viewingRoomAccess: true
+    }
   }
 });
 
